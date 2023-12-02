@@ -1,0 +1,20 @@
+{
+  "name": "bikemi",
+  "version": "0.0.1",
+  "description": "Count the number of available ATM bikes to rent in Milan, every 15 seconds",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "bikemi",
+    "milan",
+    "atm"
+  ],
+  "author": "Gabriele D'Arrigo, <darrigo.g@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "redis": "4.6.11",
+    "typescript": "5.3.2"
+  }
+}

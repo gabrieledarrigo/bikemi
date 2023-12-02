@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+
+# Compiled output
+dist
+tsconfig.tsbuildinfo
+
+# Dependency directories
+node_modules
+
+# Environment variables
+.env
+
+# IDE files
+.vscode
+.idea
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.pdf
