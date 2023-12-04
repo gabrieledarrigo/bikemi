@@ -4,6 +4,9 @@
   "description": "Count the number of available ATM bikes to rent in Milan, every 15 seconds",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "prestart": "rm -rd dist && npm run build",
+    "start": "node dist/main.js",
     "test": "npm run test"
   },
   "keywords": [
@@ -14,7 +17,12 @@
   "author": "Gabriele D'Arrigo, <darrigo.g@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "date-fns": "3.0.0-alpha.2",
+    "dotenv": "16.3.1",
     "redis": "4.6.11",
     "typescript": "5.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.2"
   }
 }
