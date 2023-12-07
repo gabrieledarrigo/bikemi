@@ -11,8 +11,6 @@ export async function poll(
   run: () => void,
   shouldStop: () => boolean = () => false
 ): Promise<void> {
-  console.log(shouldStop());
-
   do {
     await run();
 
