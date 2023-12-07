@@ -1,8 +1,12 @@
+import { StationsInformation } from "@common/types";
 import { RedisClientType } from "redis";
 
 export async function persistStationsInformation(
   client: RedisClientType,
-  stationsInformations: string
+  stationsInformation: StationsInformation
 ): Promise<string | null> {
-  return await client.set("stations:information", stationsInformations);
+  return await client.set(
+    "stations:information",
+    JSON.stringify(stationsInformation)
+  );
 }

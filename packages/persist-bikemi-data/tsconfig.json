@@ -1,7 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist"
-  }
+    "outDir": "./dist",
+    "paths": {
+      "@common/*": ["../common/src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../common"
+    }
+  ]
 }

@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "description": "Count the number of available ATM bikes to rent in Milan, every 15 seconds",
   "workspaces": [
-    "packages/persist-bikemi-data"
+    "packages/persist-bikemi-data",
+    "packages/common"
   ],
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
+    "build": "tsc --build",
+    "prestart": "npm run build",
     "start": "npm run start --workspaces --if-present",
     "test": "npm run test --workspaces --if-present"
   },

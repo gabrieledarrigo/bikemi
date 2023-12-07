@@ -1,0 +1,16 @@
+{
+  "name": "common",
+  "version": "0.0.1",
+  "description": "Common package for the Bikemi project",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "bikemi",
+    "bikesharing",
+    "types"
+  ],
+  "author": "",
+  "license": "MIT"
+}

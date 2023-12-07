@@ -4,8 +4,6 @@
   "description": "Persist Bikemi open data in Redis",
   "main": "main.js",
   "scripts": {
-    "build": "tsc --build",
-    "prestart": "rm -rf dist && npm run build",
     "start": "node dist/main.js",
     "test": "npm run test"
   },

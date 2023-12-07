@@ -19,16 +19,14 @@ export async function pollAndPersistStationsInformation(
         format(new Date(), "HH:mm:ssXXXXX")
       );
 
-      const stationsInformations = await getStationsInformation();
+      const stationsInformation = await getStationsInformation();
 
-      await persistStationsInformation(client, stationsInformations).then(
-        () => {
-          console.log(
-            `${STATIONS_INFORMATION_URL} correctly persisted`,
-            format(new Date(), "HH:mm:ssXXXXX")
-          );
-        }
-      );
+      await persistStationsInformation(client, stationsInformation).then(() => {
+        console.log(
+          `${STATIONS_INFORMATION_URL} correctly persisted`,
+          format(new Date(), "HH:mm:ssXXXXX")
+        );
+      });
     },
     () => !client.isReady
   );
