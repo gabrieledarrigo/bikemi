@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 import { RedisClientType } from "redis";
-import { poll } from "../poll";
+import { poll } from "@bikemi/common";
 import { STATIONS_STATUS_URL, getStationsStatus } from "./getStationsStatus";
 import { publishStationsStatus } from "./publishStationsStatus";
 

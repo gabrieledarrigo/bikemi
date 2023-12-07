@@ -4,7 +4,7 @@
   "description": "Count the number of available ATM bikes to rent in Milan, every 15 seconds",
   "workspaces": [
     "packages/common",
-    "packages/persist-bikemi-data",
+    "packages/publish-stations-information",
     "packages/publish-stations-status"
   ],
   "scripts": {

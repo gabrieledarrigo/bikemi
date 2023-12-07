@@ -1,5 +1,5 @@
 {
-  "name": "publish-stations-information",
+  "name": "@bikemi/publish-stations-information",
   "version": "0.0.1",
   "description": "Publish Bikemi stations information open data to a Redis channell",
   "main": "main.js",

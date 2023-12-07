@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 import { RedisClientType } from "redis";
-import { poll } from "../poll";
+import { poll } from "@bikemi/common";
 import {
   getStationsInformation,
   STATIONS_INFORMATION_URL,

@@ -1,4 +1,4 @@
-import { StationsStatus } from "@common/types";
+import { StationsStatus } from "@bikemi/common/types";
 import { RedisClientType } from "redis";
 
 export async function publishStationsStatus(

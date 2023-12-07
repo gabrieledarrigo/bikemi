@@ -1,4 +1,4 @@
-import { StationsInformation } from "@common/types";
+import { StationsInformation } from "@bikemi/common/types";
 
 export const STATIONS_INFORMATION_URL =
   "https://gbfs.urbansharing.com/bikemi.com/station_information.json";

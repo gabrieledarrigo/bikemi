@@ -5,7 +5,7 @@
       "path": "packages/common"
     },
     {
-      "path": "packages/public-stations-information"
+      "path": "packages/publish-stations-information"
     },
     {
       "path": "packages/publish-stations-status"
