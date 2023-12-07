@@ -2,9 +2,9 @@ import { format } from "date-fns";
 import { RedisClientType } from "redis";
 import { poll } from "../poll";
 import { STATIONS_STATUS_URL, getStationsStatus } from "./getStationsStatus";
-import { persistStationsStatus } from "./persistStationsStatus";
+import { publishStationsStatus } from "./publishStationsStatus";
 
-export async function pollAndPersistStationStatus(
+export async function pollAndPublishStationStatus(
   every: number,
   client: RedisClientType
 ) {
@@ -18,9 +18,9 @@ export async function pollAndPersistStationStatus(
 
       const stationsStatus = await getStationsStatus();
 
-      await persistStationsStatus(client, stationsStatus).then(() => {
+      await publishStationsStatus(client, stationsStatus).then((clients) => {
         console.log(
-          `${STATIONS_STATUS_URL} correctly persisted`,
+          `${STATIONS_STATUS_URL} correctly published to ${clients} clients`,
           format(new Date(), "HH:mm:ssXXXXX")
         );
       });

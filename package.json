@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Count the number of available ATM bikes to rent in Milan, every 15 seconds",
   "workspaces": [
+    "packages/common",
     "packages/persist-bikemi-data",
-    "packages/common"
+    "packages/publish-stations-status"
   ],
   "scripts": {
     "build": "tsc --build",
@@ -21,5 +22,10 @@
   "license": "MIT",
   "dependencies": {
     "typescript": "5.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1"
   }
 }

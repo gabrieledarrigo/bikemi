@@ -1,11 +1,11 @@
 import { StationsInformation } from "@common/types";
 import { RedisClientType } from "redis";
 
-export async function persistStationsInformation(
+export async function publishStationsInformation(
   client: RedisClientType,
   stationsInformation: StationsInformation
-): Promise<string | null> {
-  return await client.set(
+): Promise<number> {
+  return client.publish(
     "stations:information",
     JSON.stringify(stationsInformation)
   );

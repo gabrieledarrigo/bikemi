@@ -2,10 +2,13 @@
   "files": [],
   "references": [
     {
-      "path": "packages/persist-bikemi-data"
+      "path": "packages/common"
     },
     {
-      "path": "packages/common"
+      "path": "packages/public-stations-information"
+    },
+    {
+      "path": "packages/publish-stations-status"
     }
   ]
 }

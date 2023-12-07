@@ -5,9 +5,9 @@ import {
   getStationsInformation,
   STATIONS_INFORMATION_URL,
 } from "./getStationsInformation";
-import { persistStationsInformation } from "./persistStationsInformation";
+import { publishStationsInformation } from "./persistStationsInformation";
 
-export async function pollAndPersistStationsInformation(
+export async function pollAndPublishStationsInformation(
   every: number,
   client: RedisClientType
 ) {
@@ -21,7 +21,7 @@ export async function pollAndPersistStationsInformation(
 
       const stationsInformation = await getStationsInformation();
 
-      await persistStationsInformation(client, stationsInformation).then(() => {
+      await publishStationsInformation(client, stationsInformation).then(() => {
         console.log(
           `${STATIONS_INFORMATION_URL} correctly persisted`,
           format(new Date(), "HH:mm:ssXXXXX")
