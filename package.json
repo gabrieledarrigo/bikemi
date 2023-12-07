@@ -8,7 +8,7 @@
     "packages/publish-stations-status"
   ],
   "scripts": {
-    "build": "tsc --build",
+    "build": "tsc --build --verbose",
     "prestart": "npm run build",
     "start": "npm run start --workspaces --if-present",
     "test": "npm run test --workspaces --if-present"

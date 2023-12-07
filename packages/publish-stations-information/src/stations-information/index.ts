@@ -5,7 +5,7 @@ import {
   getStationsInformation,
   STATIONS_INFORMATION_URL,
 } from "./getStationsInformation";
-import { publishStationsInformation } from "./persistStationsInformation";
+import { publishStationsInformation } from "./publishStationsInformation";
 
 export async function pollAndPublishStationsInformation(
   every: number,
@@ -21,12 +21,14 @@ export async function pollAndPublishStationsInformation(
 
       const stationsInformation = await getStationsInformation();
 
-      await publishStationsInformation(client, stationsInformation).then(() => {
-        console.log(
-          `${STATIONS_INFORMATION_URL} correctly persisted`,
-          format(new Date(), "HH:mm:ssXXXXX")
-        );
-      });
+      await publishStationsInformation(client, stationsInformation).then(
+        (clients) => {
+          console.log(
+            `${STATIONS_INFORMATION_URL} correctly published to ${clients} clients`,
+            format(new Date(), "HH:mm:ssXXXXX")
+          );
+        }
+      );
     },
     () => !client.isReady
   );

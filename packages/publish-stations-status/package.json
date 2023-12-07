@@ -2,7 +2,7 @@
   "name": "@bikemi/publish-stations-status",
   "version": "0.0.1",
   "description": "Publish Bikemi stations status open data to a Redis channell",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "node dist/main.js",
     "test": "npm run test"
