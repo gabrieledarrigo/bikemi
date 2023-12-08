@@ -4,9 +4,6 @@
   "description": "Common package for the Bikemi project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "npm run test"
-  },
   "keywords": [
     "bikemi",
     "bikesharing",

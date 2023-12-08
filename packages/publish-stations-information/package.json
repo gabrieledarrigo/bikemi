@@ -4,8 +4,7 @@
   "description": "Publish Bikemi stations information open data to a Redis channell",
   "main": "dist/main.js",
   "scripts": {
-    "start": "node dist/main.js",
-    "test": "npm run test"
+    "start": "node dist/main.js"
   },
   "keywords": [
     "bikemi",

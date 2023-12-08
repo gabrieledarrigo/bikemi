@@ -7,8 +7,6 @@ const client = getClient();
 async function main() {
   await client.connect();
 
-  console.log("hereeeeee");
-
   return pollAndPublishStationStatus(15, client);
 }
 
