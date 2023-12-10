@@ -1,3 +1,6 @@
+import { describe, beforeEach, it } from "node:test";
+import assert from "node:assert";
+import sinon from "sinon";
 import { STATIONS_STATUS_URL, getStationsStatus } from "./getStationsStatus";
 
 describe("getStationsStatus", () => {
@@ -11,10 +14,17 @@ describe("getStationsStatus", () => {
     },
   };
 
+  const response = new Response(JSON.stringify(stationsStatus), {
+    status: 200,
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+
+  const fetchFn = sinon.stub(global, "fetch");
+
   beforeEach(() => {
-    global.fetch = jest.fn().mockResolvedValue({
-      json: jest.fn().mockResolvedValue(stationsStatus),
-    });
+    fetchFn.callsFake(() => Promise.resolve(response));
   });
 
   it("should fetch stations status with the correct URL and headers", async () => {
@@ -22,17 +32,14 @@ describe("getStationsStatus", () => {
       "Client-Identifier": "gabrieledarrigo-bikemi",
     };
 
-    await getStationsStatus();
-
-    expect(global.fetch).toHaveBeenCalledWith(STATIONS_STATUS_URL, {
-      method: "GET",
-      headers: expectedHeaders,
-    });
-  });
-
-  it("should return the stations status data", async () => {
     const actual = await getStationsStatus();
 
-    expect(actual).toEqual(stationsStatus);
+    assert(
+      fetchFn.calledWith(STATIONS_STATUS_URL, {
+        method: "GET",
+        headers: expectedHeaders,
+      })
+    );
+    assert.deepEqual(actual, stationsStatus);
   });
 });
