@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Bikemi RPC server",
+  "main": "dist/main.ts",
+  "scripts": {
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "bikemi",
+    "bike sharing",
+    "milan",
+    "rpc"
+  ],
+  "author": "Gabriele D'Arrigo, <darrigo.g@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@trpc/server": "^10.44.1"
+  }
+}

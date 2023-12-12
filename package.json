@@ -5,7 +5,8 @@
   "workspaces": [
     "packages/common",
     "packages/publish-stations-information",
-    "packages/publish-stations-status"
+    "packages/publish-stations-status",
+    "packages/server"
   ],
   "scripts": {
     "build": "tsc --build --verbose",

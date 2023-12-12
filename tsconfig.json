@@ -9,6 +9,9 @@
     },
     {
       "path": "packages/publish-stations-status"
+    },
+    {
+      "path": "packages/server"
     }
   ]
 }
