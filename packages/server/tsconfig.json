@@ -2,6 +2,14 @@
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist"
-  }
+    "outDir": "./dist",
+    "paths": {
+      "@bikemi/common/*": ["../common/src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../common"
+    }
+  ]
 }
