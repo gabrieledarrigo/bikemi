@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { createHTTPServer } from "@trpc/server/adapters/standalone";
 import { initTRPC } from "@trpc/server";
 import { Context, createContext } from "./context";
@@ -7,7 +8,7 @@ import { subscribeToStationsStatus } from "./resolvers/subscribeToStationsStatus
 
 const trpc = initTRPC.context<Context>().create();
 
-const router = trpc.router({
+export const router = trpc.router({
   count: trpc.procedure.query(() => {
     return 0;
   }),
@@ -15,8 +16,6 @@ const router = trpc.router({
     return subscribeToStationsStatus(opt);
   }),
 });
-
-export type AppRouter = typeof router;
 
 const { server, listen } = createHTTPServer({
   router,

@@ -4,12 +4,16 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "paths": {
-      "@bikemi/common/*": ["../common/src/*"]
+      "@bikemi/common/*": ["../common/src/*"],
+      "@bikemi/server/*": ["../server/src/*"]
     }
   },
   "references": [
     {
       "path": "../common"
+    },
+    {
+      "path": "../server"
     }
   ]
 }

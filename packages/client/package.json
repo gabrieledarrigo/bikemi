@@ -1,9 +1,8 @@
 {
-  "name": "client",
+  "name": "@bikemi/client",
   "version": "0.0.1",
   "description": "Bikemi client application",
   "main": "dist/index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +12,10 @@
     "milan"
   ],
   "author": "Gabriele D'Arrigo, <darrigo.@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@trpc/client": "^10.44.1",
+    "@trpc/server": "^10.44.1",
+    "ws": "^8.15.1"
+  }
 }

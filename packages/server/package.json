@@ -1,8 +1,9 @@
 {
-  "name": "server",
+  "name": "@bikemi/server",
   "version": "0.0.1",
   "description": "Bikemi RPC server",
   "main": "dist/main.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "node dist/server.js"
   },
