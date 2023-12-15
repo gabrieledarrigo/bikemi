@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "description": "Bikemi client application",
+  "main": "dist/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bikemi",
+    "bike sharing",
+    "milan"
+  ],
+  "author": "Gabriele D'Arrigo, <darrigo.@gmail.com>",
+  "license": "MIT"
+}

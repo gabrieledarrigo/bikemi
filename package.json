@@ -6,7 +6,8 @@
     "packages/common",
     "packages/publish-stations-information",
     "packages/publish-stations-status",
-    "packages/server"
+    "packages/server",
+    "packages/client"
   ],
   "scripts": {
     "build": "tsc --build --verbose",
@@ -16,6 +17,7 @@
   },
   "keywords": [
     "bikemi",
+    "bike sharing",
     "milan",
     "atm"
   ],

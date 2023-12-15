@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "keywords": [
     "bikemi",
-    "bikesharing",
-    "types"
+    "bike sharing",
+    "milan"
   ],
   "author": "Gabriele D'Arrigo, <darrigo.g@gmail.com>",
   "license": "MIT"
