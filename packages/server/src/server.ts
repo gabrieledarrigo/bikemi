@@ -1,9 +1,10 @@
 import "dotenv/config";
+import cors from "cors";
 import { createHTTPServer } from "@trpc/server/adapters/standalone";
 import { initTRPC } from "@trpc/server";
-import { Context, createContext } from "./context";
 import { WebSocketServer } from "ws";
 import { applyWSSHandler } from "@trpc/server/adapters/ws";
+import { Context, createContext } from "./context";
 import { subscribeToStationsStatus } from "./resolvers/subscribeToStationsStatus";
 
 const trpc = initTRPC.context<Context>().create();
@@ -18,6 +19,7 @@ export const router = trpc.router({
 });
 
 const { server, listen } = createHTTPServer({
+  middleware: cors(),
   router,
   createContext,
 });
