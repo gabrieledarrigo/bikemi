@@ -9,13 +9,10 @@ export async function subscribeToStationsStatus(opt: { ctx: Context }) {
     client.subscribe("stations:status", (message) => {
       const stationsStatus: StationsStatus = JSON.parse(message);
 
-      console.log(stationsStatus);
-
       emit.next(stationsStatus);
     });
 
     return () => {
-      console.log("unsubscribe");
       client.unsubscribe("stations:status");
     };
   });
